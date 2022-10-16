@@ -1,0 +1,2645 @@
+/********** ROOT SETTINGS **********/
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/********** CONVERT PX TO REM - 10/16*100 **********/
+html{
+    font-size: 62.5%;
+}
+
+/**************************************************** 
+    MEDIA QUERY FOR PORTRAIT MOBILE SCREEN 
+*****************************************************/
+@media only screen and (min-width:320px) and (max-width: 479px){
+    
+    /***************************************** 
+                    UTILITIES 
+    ******************************************/
+    
+    .btn a{
+        font-size: 1.3rem !important; 
+    }    
+
+    .btn-background{
+        padding: 1rem !important;
+    }
+
+    .section-header-white{
+        font-size: 2.2rem !important;
+        margin-bottom: 5rem !important;
+    }
+    
+    .section-header-deep-bg{
+        font-size: 2.2rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .container-with-bg-header{
+        font-size: 3rem !important;
+        margin: 6rem 0 3rem 0 !important;
+    }
+
+    .container-with-bg-paragraph{
+        font-size: 1.3rem !important;
+        padding: 0 1rem !important;
+    }
+
+    .btn-container-sm-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /***************************************** 
+                    PAGE NAVBAR 
+    ******************************************/
+
+    .menu{
+        display: inline-block;
+        width: auto;
+        height: auto;
+    }
+
+    .header-section .bar{
+        top: 5%;
+    }
+
+    .bar{
+        display: inline-block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--deep-background-color);
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        z-index: 200;
+        transition: transform .5s ease-out;
+    }
+
+    .bar::before, .bar::after{
+        content: '';
+        height: 2px;
+        position: absolute;
+        background-color: var(--deep-background-color);
+        right: 0;
+        width: 3rem;
+        display: inline-block;
+    }
+
+    .bar::before{
+        bottom: 1rem;
+    }
+
+    .bar::after{
+        top: 1rem;
+    }
+
+    .active .bar{
+        background-color: transparent;
+    }
+    
+    .active .bar::before{
+        transform: rotate(45deg);
+        top: 0;
+        background-color: var(--grey-text-color);
+    }
+    
+    .active .bar::after{
+        transform: rotate(-45deg);
+        top: 0;
+        width: 3rem;
+        background-color: var(--grey-text-color);
+    }
+
+    .menu-open{
+        transform: translateX(0) !important;
+    }
+
+    .navbar{
+        max-width: 70%;
+        height: 100vh;
+        margin: auto;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--white-text-color);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        padding: 0 0;
+        transform: translateX(35rem);
+        transition: transform .5s ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar::before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -50%;
+        width: 150%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .navbar-brand{
+        display: none;
+    }
+
+    .header-container::after{
+        top: 2%;
+        display: inline-block;
+    }
+
+    .about-container-bg::after,
+    .services_container-bg::after,
+    .contact-container-bg::after
+    {
+        top: 5%;
+        display: inline-block;
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+        padding: 5rem 3rem;
+        height: 60%;
+        width: 100%;    
+        margin-top: 5rem;
+        border-bottom: 1px solid var(--grey-text-color);
+        z-index: 200;
+    }
+
+    .nav-list{
+        margin: 0;
+    }
+
+    .nav-item{
+        justify-content: flex-start;
+    }
+
+    .nav-icon{
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .nav-text{
+        font-size: 2rem;
+    }
+
+    .navbar-social{
+        width: 80%;
+        height: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 5rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar-social::before{
+        content: 'Connect with us on';
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: var(--grey-text-color);
+    }
+
+    .navbar-social-icon{
+        margin-top: 10rem;
+        font-size: 3rem;
+    }
+
+    /***************************************** 
+                    HOME PAGE 
+    ******************************************/
+
+    /********** HEADER **********/
+
+    .header-section{
+        height: 100vh;
+        background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/zac-gudakov-ZuREP4hSY1c-unsplash.jpg);
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 93vh, 0 100%);
+        position: relative;
+    }
+
+    .header-container .row>*{
+        padding: 0;
+    }
+    
+    .header-text{
+        font-size: 1.8rem;
+    }
+    
+    .header-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .header-video{
+        display: none;
+    }
+    
+    /********** DESIGN BG COLOR **********/
+    .design-bg-color{
+        margin-top: -8rem;
+    }
+
+    /********** SERVICES **********/
+
+    .services-image-box{
+        padding: 0;
+    }
+    .image-box-sm-left, .image-box-sm-right{
+        height: 10rem;
+    }
+    
+    .services-image-box-bg{
+        height: 15rem;
+    }
+
+    .services-info-box{
+        flex-direction: column;
+        padding: 0;
+        position: initial;
+        text-align: center;
+    }
+    
+    .services-info-box::before{
+        display: none;
+    }
+    
+    .services-info-box-one, .services-info-box-two{
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .services-info-box-two .services-info-box-paragraph span{
+        margin-top: 2rem;
+    }
+    
+    .services-info-box-paragraph{
+        font-size: 1.3rem;
+    }
+    
+    .align-btn-right{
+        position: initial;
+        margin: auto;
+    }
+
+    /********** VALUE **********/
+    .value-section{
+        padding: 2rem 0;
+        height: auto;
+    }
+
+    .value-section .row{
+        padding: 0 1rem;
+        height: auto;
+    }
+
+    .value-image-box{
+        margin-bottom: 5rem;
+    }
+
+    .value-image-box-container-one{
+        width: 20rem;
+        height: 30rem;
+        border-radius: 1rem;
+    }
+
+    .value-image-box-container-two{
+        width: 20rem;
+        height: 20rem;
+        right: 2%;
+    }
+
+    .value-info-box{
+        height: auto;
+        position: initial;
+    }
+
+    .value-info-box-container{
+        width: 100%;
+    }
+
+    .value-info-box-container:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .value-info-box-align-right-one, 
+    .value-info-box-align-right-two,
+    .value-info-box-align-left{
+        position: initial;
+    }
+
+    .value-info-box-icon{
+        width: 6rem;
+        height: 6rem;
+        padding: .5rem;
+    }
+
+    .value-info-box-text{
+        position: initial;
+    }
+
+    .value-info-box-paragraph{
+        padding: 0 1rem;
+        font-size: 1.3rem;
+    }
+
+    .services-info-box-paragraph .align-btn-right{
+        justify-content: center;
+    }
+
+    /********** ENDORSEMENTS AND PARTNERS **********/
+    .partners-section{
+        padding: 2rem 0 5rem 0;
+        height: auto;
+    }
+
+    .carousel-cell{
+        height: 5rem;
+        width: 30%;    
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+
+    .carousel .flickity-prev-next-button{
+        width: 3.7rem;
+        height: 3.6rem;
+    }
+
+        /********** WHY CHOOSE US **********/
+    .why-choose-us-container-bg{
+        background-position: right;
+        overflow-x: hidden;
+    }
+
+    .why-choose-us-container-bg .container{
+        padding: 5rem 0;
+    }
+
+    .why-choose-us-container-bg .row{
+        margin-bottom: 0;
+        position: initial;
+        padding: 0 1rem;
+    }
+
+    .why-choose-us-container-bg .row::before{
+        display: none;
+    }
+
+    .why-choose-us-container-bg .row::after{
+        display: none;    
+    }
+
+    .why-choose-us-col{
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us-header{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us-paragraph span{
+        display: block;
+    }
+
+    .why-choose-us-paragraph, .why-choose-us-sub-paragraph{
+        font-size: 1.3rem;
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .why-choose-us-sub-paragraph{
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .align-btn-center{
+        margin-top: 3rem;
+    }
+
+    /***************************************** 
+                    ABOUT US PAGE 
+    ******************************************/
+
+    /********** ABOUT **********/
+    .about-container-bg{
+        height: 50vh;
+    }
+
+    /********** MISSION **********/
+
+    .mission-container{
+        max-width: 95%;
+        margin-top: -30%;
+    }
+
+    .mission-section .row{
+        flex-direction: column-reverse;
+        padding: 0 1rem;
+    }
+
+    .mission-info{
+        padding: 0 0;
+    }
+
+    .mission-info-header{
+        font-size: 3rem;
+    }
+
+    .mission-info-paragraph{
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .mission-img{
+        height: 30rem;
+        width: 100%;
+    }
+
+    /********** GOAL **********/
+    .goal-section{
+        padding: 5rem 1rem;
+    }
+
+    .who-we-are, .our-mission{
+        margin-bottom: 5rem;
+    }
+
+    .goal-section h2{
+        font-size: 2.5rem;
+    }
+
+    .goal-section p{
+        font-size: 1.3rem;
+    }
+
+    /********** VALUE **********/
+
+    .value-flex{
+        flex-direction: column;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .value-col{
+        text-align: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .value-col:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .value-paragraph{
+        font-size: 1.3rem;
+    }
+
+    /********** TEAM **********/
+
+    .team-section{
+        padding: 5rem 2rem;
+    }
+
+    .team-section .row{
+        flex-direction: column;
+    }
+
+    .team-col{ 
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: initial;
+        align-items: center;
+    }
+
+    .team-col-img{
+        width: 20rem;
+        height: 20rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        flex: 0 0 100%;
+    }
+
+    .team-col-info{
+        text-align: center;
+    }
+
+    .team-col-info-name{
+        font-size: 2rem;
+    }
+
+    .team-col-info-position{
+        font-size: 1.5rem;
+    }
+
+    .team-col-info-about{
+        font-size: 1.3rem;
+    }
+
+    .team-col-info-social{
+        padding: 0 5rem;
+    }
+
+    /***************************************** 
+                    OUR SERVICES PAGE 
+    ******************************************/    
+
+    /********** SERVICES **********/
+    .services_container-bg{
+        height: 50vh;
+        background-position: bottom;
+    }
+
+    .services_paragraph-section{
+        max-width: 95%;
+        margin-top: -30%;
+    }
+
+    .services_text{
+        padding-top: 5rem;
+    }
+
+    /********** SERVICES PARAGRAPH **********/
+    .services_info{
+        padding: 2rem 0 5rem 0;
+        height: auto;
+    }
+
+    .services_info-paragraph{
+        font-size: 1.5rem;
+        color: var(--deep-background-color);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .services_paragraph-section .row{
+        padding: 0 1rem;
+    }
+
+    .services_paragraph-section .row{
+        flex-direction: column-reverse;
+    }
+
+    .btn-container-left-to-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /********** SERVICES IMAGES**********/
+    .services_img{
+        height: 45vh;
+    }
+
+    .img-one{
+        top: 5%;
+    }
+
+    .img-two, .img-three, .img-four{
+        width: 35%;
+        height: 35%;
+    }
+
+    .img-two{
+        right: 5%;
+        top: 5%;
+    }
+
+    .img-three{
+        left: 20%;
+        top: 60%;
+    }
+
+    .img-four{
+        top: 45%;
+        right: 5%;
+    }
+
+    /********** SERVICES TEXT**********/
+    .services_text-section{
+        padding-top: 3rem;
+    }
+
+    .services_text-box{
+        padding: 0 1rem;
+    }
+
+    .services_text-paragraph{
+        font-size: 1.3rem;
+    }
+
+    /********** SERVICES FAQ **********/
+    .services_faq-section{
+        padding: 3rem 0;
+        padding-bottom: 0;
+    }
+
+    .services_faq{
+        max-width: 90%;
+    }
+
+    .services_faq-header{
+        font-size: 2rem;
+    }
+
+    .services_faq-question{
+        font-size: 1.7rem;
+    }
+
+    .services_faq-answer p{
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        line-height: 1.4;
+    }
+
+    /***************************************** 
+                    CONTACT US PAGE 
+    ******************************************/
+
+    .contact-container-bg{
+        height: 60vh;
+        width: 100%;
+    }
+
+    .contact-container{
+        max-width: 95%;
+        margin-top: -30%;
+    }
+
+    .contact-container-b .container-with-bg-header{
+        margin-top: 1rem !important;
+    }
+
+    .contact-section{
+        padding: 3rem 2rem;
+    }
+
+    .form_group .form_input{
+        padding-right: 3rem;
+    }
+
+    .form_group i{
+        top: 45%;
+        right: 5%;
+    }
+
+    .form_input, .form_message{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .btn-container-adjusted-margin{
+        width: 100%;
+    }
+
+    .contact-user-info{
+        margin-bottom: 5rem;
+    }
+
+    .contact-address_text{
+        padding: 0 0 0 0;
+    }
+
+    .contact-address_icon{
+        flex: 0 0 20%;
+    }
+
+    .contact-address_text{
+        flex: 0 0 80%;
+    }
+
+    .contact-address_icon{
+        font-size: 2rem;
+    }
+
+    /***************************************** 
+                    PAGE FOOTER 
+    ******************************************/
+
+    .footer-bg .footer-section{
+        padding: 3rem 0 0 0;
+    }
+
+    .footer-section .row .col-sm-12{
+        margin-bottom: 3rem;
+    }
+
+    .footer-section .row .logo-box{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-list{
+        font-size: 1.3rem;
+    }
+
+    .list-item .list-link{
+        font-size: 1.3rem;
+    }
+
+    .footer-section .row .col-sm-12 .footer-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .footer-address .row:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    .footer-address .footer-address-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .footer-social .footer-social-icon{
+        font-size: 2.5rem;
+        margin-right: 3rem;
+    }
+
+    .footer-address>.row>*{
+        width: initial;
+    }
+
+}
+
+/**************************************************** 
+    MEDIA QUERY FOR LANDSCAPE MOBILE SCREEN 
+****************************************************/
+@media only screen and (min-width:480px) and (max-width: 767px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /***************************************** 
+                    UTILITIES 
+    ******************************************/
+    
+    .btn a{
+        font-size: 1.3rem !important; 
+    }    
+
+    .btn-background{
+        padding: 1rem !important;
+    }
+
+    .section-header-white{
+        font-size: 2.5rem !important;
+        margin-bottom: 5rem !important;
+    }
+    
+    .section-header-deep-bg{
+        font-size: 2.5rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .container-with-bg-header{
+        font-size: 3rem !important;
+        margin: 5rem 0 3rem 0 !important;
+    }
+
+    .container-with-bg-paragraph{
+        font-size: 1.3rem !important;
+        padding: 0 11rem !important;
+    }
+
+    .btn-container-sm-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /***************************************** 
+                    PAGE NAVBAR 
+    ******************************************/
+    
+    .menu{
+        display: inline-block;
+        width: auto;
+        height: auto;
+    }
+
+    .header-section .bar{
+        top: 5%;
+    }
+
+    .bar{
+        display: inline-block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--deep-background-color);
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        z-index: 200;
+        transition: transform .5s ease-out;
+    }
+
+    .bar::before, .bar::after{
+        content: '';
+        height: 2px;
+        position: absolute;
+        background-color: var(--deep-background-color);
+        right: 0;
+        width: 3rem;
+        display: inline-block;
+    }
+
+    .bar::before{
+        bottom: 1rem;
+    }
+
+    .bar::after{
+        top: 1rem;
+    }
+
+    .active .bar{
+        background-color: transparent;
+    }
+    
+    .active .bar::before{
+        transform: rotate(45deg);
+        top: 0;
+        background-color: var(--grey-text-color);
+    }
+    
+    .active .bar::after{
+        transform: rotate(-45deg);
+        top: 0;
+        width: 3rem;
+        background-color: var(--grey-text-color);
+    }
+
+    .menu-open{
+        transform: translateX(0) !important;
+    }
+
+    .navbar{
+        max-width: 60%;
+        height: 100vh;
+        margin: auto;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--white-text-color);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        padding: 0 0;
+        transform: translateX(35rem);
+        transition: transform .5s ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar::before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -50%;
+        width: 150%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .navbar-brand{
+        display: none;
+    }
+
+    .header-container::after{
+        top: 2%;
+        display: inline-block;
+    }
+
+    .about-container-bg::after,
+    .services_container-bg::after,
+    .contact-container-bg::after
+    {
+        top: 5%;
+        display: inline-block;
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+        padding: 5rem 3rem;
+        height: 60%;
+        width: 100%;    
+        margin-top: 5rem;
+        border-bottom: 1px solid var(--grey-text-color);
+        z-index: 200;
+    }
+
+    .nav-list{
+        margin: 0;
+    }
+
+    .nav-item{
+        justify-content: flex-start;
+    }
+
+    .nav-icon{
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .nav-text{
+        font-size: 2rem;
+    }
+
+    .navbar-social{
+        width: 80%;
+        height: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 5rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar-social::before{
+        content: 'Connect with us on';
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: var(--grey-text-color);
+    }
+
+    .navbar-social-icon{
+        margin-top: 10rem;
+        font-size: 3rem;
+    }
+
+    /***************************************** 
+                    HOME PAGE 
+    ******************************************/
+
+    /********** HEADER **********/
+    .header-section{
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/zac-gudakov-ZuREP4hSY1c-unsplash.jpg);
+        background-position-y: bottom;
+        background-position-x: center;
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    }
+
+    .header-container{
+        height: 100vh;
+        padding: 0 3rem;
+    }
+
+    .header-container .row>*{
+        padding: 0;
+    }
+    
+    .header-text{
+        font-size: 2rem;
+    }
+    
+    .header-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .header-video{
+        display: none;
+    }
+    
+    /********** DESIGN BG COLOR **********/
+    .design-bg-color{
+        margin-top: -4rem;
+    }
+
+    /********** SERVICES **********/
+
+    .services-image-box{
+        padding: 0;
+    }
+    .image-box-sm-left, .image-box-sm-right{
+        height: 15rem;
+    }
+    
+    .services-image-box-bg{
+        height: 20rem;
+    }
+
+    .services-info-box{
+        flex-direction: column;
+        padding: 0;
+        position: initial;
+        text-align: center;
+    }
+    
+    .services-info-box::before{
+        display: none;
+    }
+    
+    .services-info-box-one, .services-info-box-two{
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .services-info-box-two .services-info-box-paragraph span{
+        margin-top: 2rem;
+    }
+    
+    .services-info-box-paragraph{
+        font-size: 1.3rem;
+    }
+
+    /********** VALUE **********/
+    .value-section{
+        padding: 2rem 0;
+        height: auto;
+    }
+
+    .value-section .row{
+        padding: 0 1rem;
+        height: auto;
+    }
+
+    .value-image-box{
+        margin-bottom: 5rem;
+    }
+
+    .value-image-box-container-one{
+        width: 30rem;
+        height: 40rem;
+        border-radius: 1rem;
+    }
+
+    .value-image-box-container-two{
+        width: 30rem;
+        height: 30rem;
+        right: 2%;
+    }
+
+    .value-info-box{
+        height: auto;
+        position: initial;
+    }
+
+    .value-info-box-container{
+        width: 100%;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-info-box-align-right-one, 
+    .value-info-box-align-right-two,
+    .value-info-box-align-left{
+        position: initial;
+    }
+
+    .value-info-box-icon{
+        width: 6rem;
+        height: 6rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .value-info-box-text{
+        position: initial;
+        padding: 0 5rem;
+    }
+
+    .value-info-box-paragraph{
+        padding: 0 1rem;
+        font-size: 1.3rem;
+    }
+
+    .services-info-box-paragraph .align-btn-right{
+        justify-content: center;
+    }
+
+    /********** ENDORSEMENTS AND PARTNERS **********/
+    .partners-section{
+        padding: 0 0 5rem 0;
+        height: auto;
+    }
+
+    .carousel-cell{
+        height: 10rem;
+        width: 28%;    
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+
+    .carousel .flickity-prev-next-button{
+        width: 3.7rem;
+        height: 3.6rem;
+    }
+
+        /********** WHY CHOOSE US **********/
+    .why-choose-us-container-bg{
+        background-position: right;
+        overflow-x: hidden;
+    }
+
+    .why-choose-us-container-bg .container{
+        padding: 5rem 0;
+    }
+
+    .why-choose-us-container-bg .row{
+        margin-bottom: 0;
+        position: initial;
+        padding: 0 1rem;
+    }
+
+    .why-choose-us-container-bg .row::before{
+        display: none;
+    }
+
+    .why-choose-us-container-bg .row::after{
+        display: none;    
+    }
+
+    .why-choose-us-col{
+        margin-bottom: 2rem;
+    }
+
+    .col-icon{
+        font-size: 2rem;
+    }
+
+    .why-choose-us-header{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us-paragraph span{
+        display: block;
+    }
+
+    .why-choose-us-paragraph, .why-choose-us-sub-paragraph{
+        font-size: 1.3rem;
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .why-choose-us-sub-paragraph{
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .align-btn-center{
+        margin-top: 3rem;
+    }
+
+    /***************************************** 
+                    ABOUT US PAGE 
+    ******************************************/
+
+    /********** ABOUT **********/
+    .about-container-bg{
+        height: 100vh;
+    }
+
+    /********** MISSION **********/
+
+    .mission-container{
+        max-width: 95%;
+        margin-top: -15%;
+    }
+
+    .mission-section .row{
+        flex-direction: column-reverse;
+        padding: 0 1rem;
+    }
+
+    .mission-info{
+        padding: 0 0;
+    }
+
+    .mission-info-header{
+        font-size: 3rem;
+    }
+
+    .mission-info-paragraph{
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .mission-img{
+        height: 45rem;
+        width: 100%;
+    }
+
+    /********** GOAL **********/
+    .goal-section{
+        padding: 5rem 1rem;
+    }
+
+    .who-we-are, .our-mission{
+        margin-bottom: 5rem;
+    }
+
+    .goal-section h2{
+        font-size: 2.5rem;
+    }
+
+    .goal-section p{
+        font-size: 1.3rem;
+    }
+
+    /********** VALUE **********/
+
+    .value-flex{
+        flex-direction: column;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .value-col{
+        text-align: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .value-col:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .value-paragraph{
+        font-size: 1.3rem;
+    }
+
+    /********** TEAM **********/
+
+    .team-section{
+        padding: 5rem 2rem;
+    }
+
+    .team-section .row{
+        flex-direction: column;
+    }
+
+    .team-col{ 
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: initial;
+        align-items: center;
+    }
+
+    .team-col-img{
+        width: 20rem;
+        height: 20rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        flex: 0 0 100%;
+    }
+
+    .team-col-info{
+        text-align: center;
+    }
+
+    .team-col-info-name{
+        font-size: 2rem;
+    }
+
+    .team-col-info-position{
+        font-size: 1.5rem;
+    }
+
+    .team-col-info-about{
+        font-size: 1.3rem;
+    }
+
+    .team-col-info-social{
+        padding: 0 15rem;
+    }
+
+    /***************************************** 
+                    OUR SERVICES PAGE 
+    ******************************************/    
+
+    /********** SERVICES **********/
+    .services_container-bg{
+        height: 90vh;
+        background-position: bottom;
+    }
+
+    .services_paragraph-section{
+        max-width: 95%;
+        margin-top: -15%;
+    }
+
+    /********** SERVICES PARAGRAPH **********/
+    .services_info{
+        padding: 2rem 0 5rem 0;
+    }
+
+    .services_info-paragraph{
+        font-size: 1.5rem;
+        color: var(--deep-background-color);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .services_paragraph-section .row{
+        padding: 0 1rem;
+    }
+
+    .services_paragraph-section .row{
+        flex-direction: column-reverse;
+    }
+
+    .btn-container-left-to-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /********** SERVICES IMAGES**********/
+    .services_img{
+        height: 100vh;
+    }
+
+    .img-one{
+        top: 5%;
+    }
+
+    .img-two, .img-three, .img-four{
+        width: 35%;
+        height: 35%;
+    }
+
+    .img-two{
+        right: 5%;
+        top: 5%;
+    }
+
+    .img-three{
+        left: 20%;
+        top: 60%;
+    }
+
+    .img-four{
+        top: 45%;
+        right: 5%;
+    }
+    /********** SERVICES TEXT**********/
+    .services_text-section{
+        padding-top: 3rem;
+    }
+
+    .services_text-box{
+        padding: 0 1rem;
+    }
+
+    .services_text-paragraph{
+        font-size: 1.3rem;
+    }
+
+    /********** SERVICES FAQ **********/
+    .services_faq-section{
+        padding: 3rem 0;
+        padding-bottom: 0;
+    }
+
+    .services_faq{
+        max-width: 90%;
+    }
+
+    .services_faq-header{
+        font-size: 2rem;
+    }
+
+    .services_faq-question{
+        font-size: 1.7rem;
+    }
+
+    .services_faq-answer p{
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        line-height: 1.4;
+    }
+
+    /***************************************** 
+                    CONTACT US PAGE 
+    ******************************************/
+
+    .contact-container-bg{
+        height: 100vh;
+    }
+
+    .contact-container{
+        max-width: 95%;
+        margin-top: -25%;
+    }
+
+    .contact-container-b .container-with-bg-header{
+        margin-top: 1rem !important;
+    }
+
+    .contact-section{
+        padding: 3rem 2rem;
+    }
+
+    .form_group .form_input{
+        padding-right: 3rem;
+    }
+
+    .form_group i{
+        top: 45%;
+        right: 5%;
+    }
+
+    .form_input, .form_message{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .btn-container-adjusted-margin{
+        width: 100%;
+    }
+
+    .contact-address_icon{
+        flex: 0 0 10%;
+    }
+
+    .contact-address_text{
+        flex: 0 0 90%;
+    }
+
+    .contact-user-info{
+        margin-bottom: 5rem;
+    }
+
+    /***************************************** 
+                    PAGE FOOTER 
+    ******************************************/
+
+    .footer-bg .footer-section{
+        padding: 3rem 0 0 0;
+    }
+
+    .footer-section .row .col-sm-12{
+        margin-bottom: 3rem;
+    }
+
+    .footer-section .row .logo-box{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-list{
+        font-size: 1.3rem;
+    }
+
+    .list-item .list-link{
+        font-size: 1.3rem;
+    }
+
+    .footer-section .row .col-sm-12 .footer-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .footer-address .row:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    .footer-address .footer-address-paragraph{
+        font-size: 1.3rem;
+    }
+
+    .footer-social .footer-social-icon{
+        font-size: 2.5rem;
+        margin-right: 3rem;
+    }
+
+    .footer-address>.row>*{
+        width: initial;
+    }
+
+}
+
+/**************************************************** 
+    MEDIA QUERY FOR TABLET SCREEN 
+****************************************************/
+@media only screen and (min-width:768px) and (max-width: 979px){    
+
+    /***************************************** 
+                    UTILITIES 
+    ******************************************/
+    
+    .btn a{
+        font-size: 2rem !important; 
+    }    
+
+    .btn-background{
+        padding: 1.5rem !important;
+    }
+
+    .section-header-white{
+        font-size: 3rem !important;
+        margin-bottom: 5rem !important;
+    }
+    
+    .section-header-deep-bg{
+        font-size: 3rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .container-with-bg-header{
+        font-size: 3.5rem !important;
+        margin: 10rem 0 3rem 0 !important;
+    }
+
+    .container-with-bg-paragraph{
+        font-size: 2.3rem !important;
+        padding: 0 11rem !important;
+    }
+
+    .btn-container-sm-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /***************************************** 
+                    PAGE NAVBAR 
+    ******************************************/
+    
+    .menu{
+        display: inline-block;
+        width: auto;
+        height: auto;
+    }
+
+    .header-section .bar{
+        top: 5%;
+    }
+
+    .bar{
+        display: inline-block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--deep-background-color);
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        z-index: 200;
+        transition: transform .5s ease-out;
+    }
+
+    .bar::before, .bar::after{
+        content: '';
+        height: 2px;
+        position: absolute;
+        background-color: var(--deep-background-color);
+        right: 0;
+        width: 3rem;
+        display: inline-block;
+    }
+
+    .bar::before{
+        bottom: 1rem;
+    }
+
+    .bar::after{
+        top: 1rem;
+    }
+
+    .active .bar{
+        background-color: transparent;
+    }
+    
+    .active .bar::before{
+        transform: rotate(45deg);
+        top: 0;
+        background-color: var(--grey-text-color);
+    }
+    
+    .active .bar::after{
+        transform: rotate(-45deg);
+        top: 0;
+        width: 3rem;
+        background-color: var(--grey-text-color);
+    }
+
+    .menu-open{
+        transform: translateX(0) !important;
+    }
+
+    .navbar{
+        max-width: 45%;
+        height: 100%;
+        margin: auto;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--white-text-color);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        padding: 0 0;
+        transform: translateX(35rem);
+        transition: transform .5s ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar::before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -50%;
+        width: 150%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .navbar-brand{
+        display: none;
+    }
+
+    .header-container::after{
+        top: 2%;
+        display: inline-block;
+    }
+
+    .about-container-bg::after,
+    .services_container-bg::after,
+    .contact-container-bg::after
+    {
+        top: 5%;
+        display: inline-block;
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+        padding: 5rem 3rem;
+        height: 60%;
+        width: 100%;    
+        margin-top: 5rem;
+        border-bottom: 1px solid var(--grey-text-color);
+        z-index: 200;
+    }
+
+    .nav-list{
+        margin: 0;
+    }
+
+    .nav-item{
+        justify-content: flex-start;
+    }
+
+    .nav-icon{
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .nav-text{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .navbar-social{
+        width: 80%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    .navbar-social::before{
+        content: 'Connect with us on';
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: var(--grey-text-color);
+    }
+
+    .navbar-social-icon{
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+
+    /***************************************** 
+                    HOME PAGE 
+    ******************************************/
+
+    /********** HEADER **********/
+    .header-section{
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/zac-gudakov-ZuREP4hSY1c-unsplash.jpg);
+        background-position-y: bottom;
+        background-position-x: center;
+        clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+    }
+
+    .header-container{
+        height: 100vh;
+        padding: 0 3rem;
+    }
+
+    .header-container .row>*{
+        padding: 0;
+        width: 80%;
+    }
+    
+    .header-text{
+        font-size: 3rem;
+    }
+    
+    .header-paragraph{
+        font-size: 1.7rem;
+    }
+
+    .header-video{
+        display: none;
+    }
+    
+    /********** DESIGN BG COLOR **********/
+    .design-bg-color{
+        margin-top: -20rem;
+        height: 20vh;
+    }
+
+    /********** SERVICES **********/
+
+    .services-image-box{
+        padding: 0;
+    }
+    .image-box-sm-left, .image-box-sm-right{
+        height: 25rem;
+    }
+    
+    .services-image-box-bg{
+        height: 30rem;
+    }
+
+    .services-info-box{
+        flex-direction: column;
+        padding: 0;
+        position: initial;
+        text-align: center;
+    }
+    
+    .services-info-box::before{
+        display: none;
+    }
+    
+    .services-info-box-one, .services-info-box-two{
+        padding: 0 6rem;
+        margin-bottom: 3rem;
+    }
+
+    .services-info-box-header{
+        font-size: 2.5rem;
+    }
+    
+    .services-info-box-two .services-info-box-paragraph span{
+        margin-top: 2rem;
+    }
+    
+    .services-info-box-paragraph{
+        font-size: 1.7rem;
+    }
+    
+    .align-btn-right{
+        position: initial;
+        margin: auto;
+    }
+
+    /********** VALUE **********/
+    .value-section{
+        padding: 2rem 0;
+        height: auto;
+    }
+
+    .value-section .row{
+        padding: 0 1rem;
+        height: auto;
+    }
+
+    .value-image-box{
+        margin-bottom: 5rem;
+    }
+
+    .value-image-box-container-one{
+        width: 35rem;
+        height: 45rem;
+    }
+
+    .value-image-box-container-two{
+        width: 40rem;
+        height: 35rem;
+        right: 0;
+    }
+
+    .value-info-box{
+        height: 60rem;
+    }
+
+    .value-info-box-container{
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .value-info-box-align-right-one, 
+    .value-info-box-align-right-two{
+        right: 0;
+        padding: 3rem 8rem;
+    }
+
+    .value-info-box-align-right-two{
+        top: 60%;
+    }
+
+    .value-info-box-align-left{
+        left: 0;
+        top: 35%;
+        padding: 0 5rem;
+    }
+
+    .value-info-box-icon{
+        width: 10rem;
+        height: 10rem;
+        padding: 1rem;
+    }
+
+    .value-info-box-text{
+        left: 35%;
+    }
+
+    .value-info-box-header{
+        font-size: 2.5rem;
+    }
+
+    .value-info-box-paragraph{
+        padding: 0 1rem;
+        font-size: 1.7rem;
+    }
+
+    /********** ENDORSEMENTS AND PARTNERS **********/
+    .partners-section{
+        padding: 0 0 5rem 0;
+        height: auto;
+    }
+
+    .carousel-cell{
+        height: 10rem;
+        width: 28%;    
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+
+    .carousel .flickity-prev-next-button{
+        width: 3.7rem;
+        height: 3.6rem;
+    }
+
+        /********** WHY CHOOSE US **********/
+    .why-choose-us-container-bg{
+        background-position: right;
+        overflow-x: hidden;
+    }
+
+    .why-choose-us-container-bg .container{
+        padding: 5rem 0;
+    }
+
+    .why-choose-us-container-bg .row{
+        margin-bottom: 0;
+        position: initial;
+        padding: 0 1rem;
+    }
+
+    .why-choose-us-container-bg .row::before{
+        display: none;
+    }
+
+    .why-choose-us-container-bg .row::after{
+        display: none;    
+    }
+
+    .why-choose-us-col{
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us-header{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us-paragraph span{
+        display: block;
+    }
+
+    .why-choose-us-paragraph, .why-choose-us-sub-paragraph{
+        font-size: 1.7rem;
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .why-choose-us-sub-paragraph{
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .align-btn-center{
+        margin-top: 3rem;
+    }
+
+    /***************************************** 
+                    ABOUT US PAGE 
+    ******************************************/
+
+    /********** ABOUT **********/
+    .about-container-bg{
+        height: 50vh;
+    }
+
+    /********** MISSION **********/
+
+    .mission-container{
+        max-width: 90%;
+        margin-top: -30%;
+    }
+
+    .mission-section .row{
+        flex-direction: column-reverse;
+        padding: 0 3rem;
+    }
+
+    .mission-info{
+        padding: 0 0;
+    }
+
+    .mission-info-header{
+        font-size: 4rem;
+    }
+
+    .mission-info-paragraph{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .mission-img{
+        height: 65rem;
+        width: 100%;
+    }
+
+    /********** GOAL **********/
+    .goal-section{
+        padding: 5rem 3rem;
+    }
+
+    .who-we-are, .our-mission{
+        margin-bottom: 5rem;
+    }
+
+    .goal-section h2{
+        font-size: 3rem;
+    }
+
+    .goal-section p{
+        font-size: 2rem;
+    }
+
+    /********** VALUE **********/
+
+    .value-section{
+        padding: 5rem;
+    }
+
+    .value-flex{
+        flex-direction: column;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .value-col{
+        text-align: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .value-col:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .value-sub-header{
+        font-size: 2.5rem;
+    }
+
+    .value-paragraph{
+        font-size: 2rem;
+    }
+
+    .value-col .col-icon{
+        font-size: 2.5rem;
+        padding: 3.5rem 4rem;
+    }
+
+    /********** TEAM **********/
+
+    .team-section{
+        padding: 5rem 2rem;
+    }
+
+    .team-section .row{
+        flex-direction: column;
+    }
+
+    .team-col{ 
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: initial;
+        align-items: center;
+    }
+
+    .team-col-img{
+        width: 30rem;
+        height: 20rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        flex: 0 0 100%;
+    }
+
+    .team-col-info{
+        text-align: center;
+    }
+
+    .team-col-info-name{
+        font-size: 3rem;
+    }
+
+    .team-col-info-position{
+        font-size: 2.5rem;
+    }
+
+    .team-col-info-about{
+        font-size: 1.7rem;
+        padding: 0 2rem;
+    }
+
+    .team-col-info-social{
+        padding: 0 15rem;
+    }
+
+    .team-social-link{
+        font-size: 3.5rem;
+    }
+
+    /***************************************** 
+                    OUR SERVICES PAGE 
+    ******************************************/    
+
+    /********** SERVICES **********/
+    .services_container-bg{
+        height: 50vh;
+        background-position: bottom;
+    }
+
+    .services_paragraph-section{
+        max-width: 95%;
+        margin-top: -25%;
+    }
+
+    /********** SERVICES PARAGRAPH **********/
+
+    .services_info-paragraph{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .services_paragraph-section .row{
+        padding: 0 2rem;
+    }
+
+    /********** SERVICES IMAGES**********/
+    .services_img{
+        height: 40vh;
+    }
+
+    .img-two, .img-three, .img-four{
+        width: 35%;
+        height: 35%;
+    }
+
+    .img-two{
+        right: 5%;
+    }
+
+    .img-three{
+        left: 20%;
+        top: 55%;
+    }
+
+    .img-four{
+        top: 40%;
+        right: 5%;
+    }
+
+    /********** SERVICES TEXT**********/
+    .services_text-section{
+        padding: 3rem 5rem 0 5rem;
+    }
+
+    .services_text-box{
+        padding: 0 1rem;
+    }
+
+    .services-text-header{
+        font-size: 2.5rem;
+    }
+
+    .services_text-paragraph{
+        font-size: 2rem;
+    }
+
+    /********** SERVICES FAQ **********/
+    .services_faq-section{
+        padding: 3rem 0;
+        padding-bottom: 0;
+    }
+
+    .services_faq{
+        max-width: 90%;
+    }
+
+    .services_faq-header{
+        font-size: 2.5rem;
+    }
+
+    .services_faq-question{
+        font-size: 2rem;
+    }
+
+    .services_faq-answer p{
+        font-size: 1.7rem;
+        padding-top: 1rem;
+        line-height: 1.4;
+    }
+
+    /***************************************** 
+                    CONTACT US PAGE 
+    ******************************************/
+
+    .contact-container-bg{
+        height: 60vh;
+    }
+
+    .contact-container{
+        max-width: 90%;
+        margin-top: -25%;
+    }
+
+    .contact-container-b .container-with-bg-header{
+        margin-top: 1rem !important;
+    }
+
+    .contact-section{
+        padding: 3rem 5rem;
+    }
+
+    .contact-info-header{
+        font-size: 3rem;
+    }
+
+    .form_group .form_input{
+        padding-right: 4rem;
+    }
+
+    .form_group i{
+        top: 56%;
+        right: 4%;
+    }
+
+    .form_input, .form_message{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .form_label{
+        font-size: 2rem;
+    }
+
+    .btn-container-adjusted-margin{
+        width: 100%;
+    }
+
+    .contact-user-info{
+        margin-bottom: 5rem;
+    }
+
+    .contact-address_icon{
+        flex: 0 0 10%;
+    }
+
+    .contact-address_text{
+        flex: 0 0 90%;
+    }
+
+    .contact-address_icon{
+        font-size: 4rem;
+    }
+
+    .contact-address_header{
+        font-size: 2.5rem;
+    }
+
+    .contact-address_paragraph{
+        font-size: 2rem;
+    }
+
+    /***************************************** 
+                    PAGE FOOTER 
+    ******************************************/
+
+    .footer-bg .footer-section{
+        padding: 3rem 0 0 0;
+    }
+
+    .footer-section .row .col-sm-12{
+        margin-bottom: 3rem;
+    }
+
+    .footer-section .row .logo-box{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-section .footer-header{
+        font-size: 2.5rem;
+    }
+
+    .footer-section .list-item .list-link{
+        font-size: 2rem;
+    }
+
+    .footer-section .row .col-sm-12 .footer-paragraph{
+        font-size: 2rem;
+    }
+
+    .footer-address .row:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    .footer-address .footer-address-icon{
+        font-size: 3rem;
+    }
+
+    .footer-address .footer-address-header{
+        font-size: 2.5rem;
+    }
+
+    .footer-address .footer-address-paragraph{
+        font-size: 2rem;
+    }
+
+    .footer-social .footer-social-icon{
+        font-size: 4rem;
+        margin-right: 3rem;
+    }
+
+    .footer-address>.row>*{
+        width: initial;
+    }
+
+}
+
+/**************************************************** 
+    MEDIA QUERY FOR LARGE (DESKTOP) SCREEN 
+****************************************************/
+@media only screen and (min-width:1024px) and (max-width: 1199px){
+
+    /***************************************** 
+                    UTILITIES 
+    ******************************************/
+    
+    .btn a{
+        font-size: 2.3rem !important; 
+    }    
+
+    .btn-background{
+        padding: 1.5rem !important;
+    }
+
+    .section-header-white{
+        font-size: 3rem !important;
+        margin-bottom: 5rem !important;
+    }
+    
+    .section-header-deep-bg{
+        font-size: 3rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .container-with-bg-header{
+        font-size: 4rem !important;
+        margin: 10rem 0 3rem 0 !important;
+    }
+
+    .container-with-bg-paragraph{
+        font-size: 2.3rem !important;
+        padding: 0 11rem !important;
+    }
+
+    .btn-container-sm-center{
+        display: flex;
+        justify-content: center;
+    }
+
+    /***************************************** 
+                    NAVBAR 
+    ******************************************/
+    
+
+    .navbar{
+        padding: 0 5rem;
+    }
+
+    .navbar-nav{
+        width: 65%;
+    }
+    
+    .nav-list{
+        width: 80%;
+    }
+
+    .nav-link, .navbar-social-icon{
+        font-size: 2rem;
+    }
+   
+    /***************************************** 
+                    HOME PAGE 
+    ******************************************/
+
+    /********** HEADER **********/
+
+    .header-section{
+        width: 100%;
+        height: 58vh;
+        clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+    }
+
+    .header-paragraph{
+        font-size: 2.5rem;
+    }
+
+    /********** DESIGN BG COLOR **********/
+    .design-bg-color{
+        margin-top: -20rem;
+    }
+
+    /********** SERVICES **********/
+
+    .services-info-box{
+        padding: 2rem 5rem;
+    }
+
+    .services-info-box::before{
+        height: 30rem;
+        left: 48%;
+    }
+
+    .services-info-box-header{
+        font-size: 2.5rem;
+    }
+
+    .services-info-box-paragraph{
+        font-size: 2.2rem;
+    }
+
+    .services-info-box-one, .services-info-box-two{
+        padding: 0 3rem;
+    }
+
+    /********** VALUE **********/
+
+    .value-section{
+        height: 60rem;
+    }
+
+    .value-info-box-container{
+        width: 95%;
+    }
+
+    .value-info-box-paragraph{
+        padding: 0 11rem;
+    }
+
+    /********** WHY CHOOSE US **********/
+
+    .why-choose-us-container-bg .container{
+        padding: 3rem 10rem;
+    }
+
+    /***************************************** 
+                    ABOUT US PAGE
+    ******************************************/    
+
+    .about-container-bg{
+        height: 35vh;
+    }
+
+    .mission-container{
+        margin-top: -20%;
+    }
+
+    .mission-container .row{
+        padding: 0 2rem;
+    }
+
+    /********** VALUE **********/
+    .value-section{
+        height: auto;
+    }
+
+    /***************************************** 
+                    OUR SERVICES
+    ******************************************/    
+
+    /********** SERVICES **********/
+    .services_container-bg{
+        height: 40vh;
+        background-position: bottom;
+    }
+
+    .services_paragraph-section{
+        max-width: 95%;
+        margin-top: -20%;
+    }
+
+    /********** SERVICES PARAGRAPH **********/
+    .services_info{
+        padding: 2rem 0;
+    }
+
+    .services_info-paragraph{
+        font-size: 2.3rem;
+        font-weight: 600;
+    }
+
+    .services_paragraph-section .row{
+        padding: 0 2rem;
+    }
+
+    /********** SERVICES IMAGES**********/
+    
+    .services_img{
+        height: 40vh;
+    }
+
+    .img-two, .img-three, .img-four{
+        width: 35%;
+        height: 35%;
+    }
+
+    .img-two{
+        right: 5%;
+    }
+
+    .img-three{
+        left: 20%;
+        top: 55%;
+    }
+
+    .img-four{
+        top: 40%;
+        right: 5%;
+    }
+
+    /********** SERVICES TEXT**********/
+    .services_text-section{
+        padding: 3rem 5rem 0 5rem;
+    }
+
+    .services_text-box{
+        padding: 0 1rem;
+    }
+
+    .services-text-header{
+        font-size: 3rem;
+    }
+
+    .services_text-paragraph{
+        font-size: 2.5rem;
+    }
+
+    /********** SERVICES FAQ **********/
+    .services_faq-section{
+        padding: 3rem 0;
+        padding-bottom: 0;
+    }
+
+    .services_faq{
+        max-width: 90%;
+    }
+
+    .services_faq-header{
+        font-size: 2.8rem;
+    }
+
+    .services_faq-question{
+        font-size: 2.3rem;
+    }
+
+    .services_faq-answer p{
+        font-size: 2rem;
+        padding-top: 1rem;
+        line-height: 1.4;
+    }
+
+    /***************************************** 
+                    CONTACT US PAGE 
+    ******************************************/
+
+    .contact-container-bg{
+        height: 40vh;
+    }
+
+    .contact-container{
+        max-width: 95%;
+        margin-top: -20%;
+    }
+
+    .contact-container-b .container-with-bg-header{
+        margin-top: 1rem !important;
+    }
+
+    .contact-section{
+        padding: 3rem 5rem;
+    }
+
+    .contact-info-header{
+        font-size: 3rem;
+    }
+
+    .form_group .form_input{
+        padding-right: 4rem;
+    }
+
+    .form_group i{
+        top: 56%;
+        right: 4%;
+    }
+
+    .form_input, .form_message{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .form_label{
+        font-size: 2rem;
+    }
+
+    .btn-container-adjusted-margin{
+        width: 100%;
+    }
+
+    .contact-user-info{
+        margin-bottom: 5rem;
+    }
+
+    .contact-address_icon{
+        flex: 0 0 10%;
+    }
+
+    .contact-address_text{
+        flex: 0 0 90%;
+    }
+
+    .contact-address_icon{
+        font-size: 4rem;
+    }
+
+    .contact-address_header{
+        font-size: 2.5rem;
+    }
+
+    .contact-address_paragraph{
+        font-size: 2rem;
+    }
+
+    /***************************************** 
+                    FOOTER 
+    ******************************************/
+
+    .footer-address-header{
+        font-size: 1.8rem;
+    }
+
+}
+
+/**************************************************** 
+    MEDIA QUERY FOR EXTRA-LARGE SCREEN 
+/****************************************************/
+@media only screen and (min-width:1200px){
+
+}

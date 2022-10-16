@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>August Mien</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+
+    <div class="container-fluid contact-container-bg background-img">
+        <!---------- NAVIGATION BAR ---------->
+        <div class="menu">
+            <span class="bar"></span>
+        </div>
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">
+                <img src="img/logo.PNG" alt="August Mien Logo">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home nav-icon"></i>
+                        <small class="nav-text">Home</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info nav-icon"></i>
+                        <small class="nav-text">About us</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">
+                        <i class="fas fa-file-contract nav-icon"></i>
+                        <small class="nav-text">Our services</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">
+                        <i class="fas fa-address-book nav-icon"></i>
+                        <small class="nav-text">Contact us</small>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-social">
+                <a href="#" class="navbar-social-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="navbar-social-icon"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="navbar-social-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        
+        <!---------- CONTACT HEADER ---------->
+        <h1 class="container-with-bg-header" data-aos="fade-left">Contact Us</h1>
+        <p class="container-with-bg-paragraph" data-aos="fade-right">
+            You can contact us with anything related to our Services. We'll get in touch with you as soon as possible.
+        </p>
+    </div>
+
+    <!---------- CONTACT ---------->
+    <div class="contact-container-fluid">
+        <div class="contact-container">
+            <section class="container contact-section">
+                <h1 class="contact-info-header" data-aos="fade-right">
+                    Send us a Message
+                </h1>
+                <div class="row">
+                    <div class="contact-user-info col-lg-6 col-sm-12" data-aos="fade-up">
+                        <form action="#" class="form">
+                            <div class="form_group">
+                                <label for="firstName" class="form_label">First Name <span>*</span></label>
+                                <input type="text" class="form_input" id="firstName" required>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="form_group">
+                                <label for="lastName" class="form_label">Last Name <span>*</span></label>
+                                <input type="text" class="form_input" id="lastName" required>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="form_group">
+                                <label for="phone" class="form_label">Phone Number <span>*</span></label>
+                                <input type="tel" class="form_input" id="phone" required>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="form_group">
+                                <label for="email" class="form_label">Email <span>*</span></label>
+                                <input type="email" class="form_input" id="email" required>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="form_group">
+                                <label for="companyName" class="form_label">Company Name</label>
+                                <input type="text" class="form_input" id="companyName">
+                            </div>
+                            <div class="form_group">
+                                <label for="companyAddress" class="form_label">Company Address</label>
+                                <input type="text" class="form_input" id="companyAddress">
+                            </div>
+                            <div class="form_group">
+                                <label for="message" class="form_label">Message <span>*</span></label>
+                                <textarea class="form_message" id="message" required></textarea>
+                            </div>
+                            <div class="btn-container-adjusted-margin">
+                                <button class="btn btn-background">Submit</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="contact-address col-lg-6 col-sm-12" data-aos="fade-down">
+                        <div class="row contact-address_container">
+                            <div class="col-lg-1 col-sm-4 contact-address_icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="col-lg-11 col-sm-8 contact-address_text">
+                                <h3 class=".contact-address_header"> Reach us at Our Office </h3>
+                                <p class=".contact-address_paragraph">
+                                    123 Adebowale way, Lekki Phase 2, Lekki,
+                                    <span>Lagos,</span>
+                                    <span>Nigeria.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row contact-address_container">
+                            <div class="col-lg-1 col-sm-4 contact-address_icon">
+                                <i class="fas fa-phone fa-rotate-90"></i>
+                            </div>
+                            <div class="col-lg-11 col-sm-8 contact-address_text">
+                                <h3 class="footer-address-header"> Reach us by calling </h3>
+                                <p class="footer-address-paragraph">
+                                    Biola Philips
+                                    <span>234 (0) 703 0001 330</span>
+                                    <span>Mon-Fri, 8:00am-5:00pm</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!---------- FOOTER ---------->
+    <div class="container-fluid footer-bg">
+        <footer class="container footer-section">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12">
+                    <div class="logo-box">
+                        <img src="img/logo.PNG" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <h3 class="footer-header"> Company </h3>
+                    <ul class="footer-list">
+                        <li class="list-item"><a href="#" class="list-link">Blog</a></li>
+                        <li class="list-item"><a href="#" class="list-link">Services</a></li>
+                        <li class="list-item"><a href="#" class="list-link">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-12 footer-address">
+                    <h3 class="footer-header"> Contact </h3>
+                    <p class="footer-paragraph">
+                        You can contact us with anything related to our Services. We will get in touch with you as soon as possible.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-4">
+                            <i class="fas fa-map-marker-alt footer-address-icon"></i>
+                        </div>
+                        <div class="col-lg-10 col-sm-8">
+                            <h3 class="footer-address-header"> Reach us at Our Office </h3>
+                            <p class="footer-address-paragraph">
+                                123 Adebowale way, Lekki Phase 2, Lekki,
+                                <span>Lagos,</span>
+                                <span>Nigeria.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-4">
+                            <i class="fas fa-phone fa-rotate-90 footer-address-icon"></i>
+                        </div>
+                        <div class="col-lg-10 col-sm-8">
+                            <h3 class="footer-address-header"> Reach us by calling </h3>
+                            <p class="footer-address-paragraph">
+                                Biola Philips
+                                <span>234 (0) 703 0001 330</span>
+                                <span>Mon-Fri, 8:00am-5:00pm</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <h3 class="footer-header"> Social </h3>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 50
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+/********** ROOT SETTINGS **********/
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/********** CONVERT PX TO REM - 10/16*100 **********/
+html{
+    font-size: 62.5%;
+}
+
+/********** SERVICES **********/
+.services_container-bg{
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/zac-gudakov-ZuREP4hSY1c-unsplash.jpg);
+    background-position: bottom;
+    height: 75vh;
+    position: relative;
+}
+
+.services_container-bg::after{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/logo.PNG);
+    background-position: center;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    display: none;
+}
+
+.services_paragraph-section{
+    background-color: var(--white-text-color);
+    box-shadow: var(--deep-shadow);
+    height: auto;
+    max-width: 95%;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: -10%;
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+/********** SERVICES INFO **********/
+.services_info{
+    padding: 5rem 0;
+    height: auto;
+}
+
+.services_info-paragraph{
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+}
+
+/********** SERVICES IMAGES**********/
+
+.services_img{
+    height: 80vh;
+    position: relative;
+}
+
+.img-one{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 5%;
+    top: 0;
+}
+
+.img-two, .img-three, .img-four{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+}
+
+.img-two{
+    right: 0;
+    top: 0;
+}
+
+.img-three{
+    left: 15%;
+    top: 55%;
+}
+
+.img-four{
+    top: 45%;
+    right: 0;
+}
+
+.services_img-child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    -o-object-fit: cover;
+    -o-object-position: left;
+    border-radius: 5px;
+}
+
+/********** SERVICES TEXT**********/
+.services_text-section{
+    padding-top: 3rem;
+}
+
+.services_text-box{
+    text-align: center;
+    padding: 0 13rem;
+    margin-bottom: 5rem;
+}
+
+.services_text-header{
+    font-weight: 700;
+    color: var(--deep-background-color);
+}
+
+.services_text-paragraph{
+    font-size: 1.5rem;
+}
+
+.services_text-paragraph span{
+    display: block;
+    font-weight: 700;
+    color: var(--light-background-color);
+    margin-top: 1rem;
+}
+
+/********** SERVICES FAQ **********/
+.services_faq-section{
+    padding: 5rem 0;
+}
+
+.services_faq{
+    max-width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(201, 192, 192);
+    cursor: pointer;
+}
+
+.services_faq-header{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--deep-background-color);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.services_faq-question{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-background-color);
+}
+
+.services_faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+.services_faq-answer p{
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    line-height: 1.6;
+}
+
+.services_faq.active .services_faq-answer{
+    max-height: 10rem;
+    animation: fade 1.5s ease-in-out;
+}
+
+.services_faq-question i{
+    transition: transform 0.5s ease-in;
+}
+
+.services_faq.active .services_faq-question i{
+    transform: rotate(180deg);
+}

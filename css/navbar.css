@@ -1,0 +1,81 @@
+/********** ROOT SETTINGS **********/
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/********** CONVERT PX TO REM - 10/16*100 **********/
+html{
+    font-size: 62.5%;
+}
+
+/********** NAVBAR **********/
+
+.menu{
+    display: none;
+}
+
+.navbar{
+    width: 100%;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white-text-color);
+    position: fixed;
+    top: 0;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0 5rem;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 0;
+    margin-left: -10%;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
+    font-weight: 600;
+}
+
+.nav-link, .navbar-social-icon{
+    text-decoration: none;
+    color: var(--black-text-color);
+    font-size: 2rem;
+}
+
+.nav-link:hover .nav-link:visited{
+    color: var(--black-text-color);
+}
+
+.navbar-social{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-social-icon:hover, .navbar-social-icon:visited{
+    color: var(--deep-background-color);
+}
+
+.nav-item .active{
+    color: var(--deep-background-color);
+}
+
+.nav-icon{
+    display: none;
+}

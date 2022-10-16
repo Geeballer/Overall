@@ -1,0 +1,153 @@
+/********** ROOT SETTINGS **********/
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/********** CONVERT PX TO REM - 10/16*100 **********/
+html{
+    font-size: 62.5%;
+}
+
+/********** CONTACT **********/
+
+.contact-container-bg{
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/florian-schmidinger-b_79nOqf95I-unsplash.jpg);
+    background-position: fit-content;
+    height: 75vh;
+    position: relative;
+}
+
+.contact-container-bg::after{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/logo.PNG);
+    background-position: center;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    display: none;
+}
+
+.contact-container{
+    background-color: var(--white-text-color);
+    box-shadow: var(--deep-shadow);
+    height: auto;
+    max-width: 95%;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: -10%;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.contact-section{
+    padding: 5rem 10rem;
+}
+
+.contact-info-header{
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.form_group{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form_label{
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: block;
+}
+
+.form_label span{
+    color: red;
+}
+
+.form_input, .form_message{
+    display: block;
+    font-size: 1.5rem;
+    padding: 5px 1rem ;
+    outline: none;
+    resize: none;
+    border: 1px solid rgb(204, 199, 199);
+    border-radius: 5px;
+    width: 80%;
+
+}
+
+.form_group .form_input{
+    padding-right: 4rem;
+}
+
+.form_group.success input{
+    border: 1px solid #55c57a;
+}
+
+.form_group.error input{
+    border: 1px solid #ff7730;
+}
+
+.form_message{
+    height: 10rem;  
+    word-wrap: break-word;
+    word-break: break-all;  
+}
+
+.contact-address_container{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.contact-address_icon{
+    font-size: 3rem;    
+    color: var(--deep-background-color);
+}
+
+.contact-address_header{
+    font-weight: 700;
+}
+
+.contact-address_paragraph{
+    font-size: 1.5rem;
+}
+
+.contact-address_paragraph span{
+    display: block;
+}
+
+.form_group i{
+    position: absolute;
+    top: 55%;
+    right: 23%;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+.form_group.success i.fa-check-circle{
+    visibility: visible;
+    color: #55c57a;
+}
+
+.form_group.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #ff7730;
+}
+
+.btn-container-adjusted-margin{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container-adjusted-margin button{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.btn-container-adjusted-margin button:hover, button:active{
+    color: #fff;
+}

@@ -1,0 +1,86 @@
+/********** ROOT SETTINGS **********/
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/********** CONVERT PX TO REM - 10/16*100 **********/
+html{
+    font-size: 62.5%;
+}
+
+/********** FOOTER **********/
+.footer-bg{
+    height: auto;
+    background-image: linear-gradient(to top, #08303a, #348da1);
+    color: var(--white-text-color);
+}
+
+.footer-section{
+    padding: 3rem 0;
+}
+
+.footer-header{
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.list-item{
+    list-style: none;
+    height: 3rem;
+}
+
+.list-item .list-link{
+    text-decoration: none;
+    color: var(--white-text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-item .list-link:hover{
+    color: var(--white-text-color);
+}
+
+.footer-paragraph{
+    font-size: 1.5rem;
+}
+
+.footer-address-icon{
+    font-size: 2rem;
+    
+}
+
+.footer-address-header{
+    font-weight: 600;
+}
+
+.footer-address-paragraph{
+    font-size: 1.2rem;
+}
+
+.footer-address-paragraph span{
+    display: block;
+}
+
+.footer-social{
+    display: flex;
+}
+
+.footer-social-icon{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--white-text-color);
+    margin-right: 2rem;
+}
+
+.footer-social-icon:hover{
+    color: var(--white-text-color);
+}
